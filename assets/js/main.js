@@ -1,6 +1,6 @@
 const spanTxt = document.querySelector('.exploreTxtSpan')
 
-const spanTxtData = ["Restaurants","Nature"]
+const spanTxtData = ["Culture","Nature"]
 let idx = 0;
 
 function changeSpan(){
