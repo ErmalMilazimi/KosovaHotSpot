@@ -9,7 +9,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
-  max-height: 1300px;
+  max-height: 1500px;
 }
 body {
   background: whitesmoke;
@@ -29,11 +29,6 @@ nav {
   display: flex;
   justify-content: center;
   z-index: 1;
-}
-.nav-logo-container {
-  width: 200px;
-  height: inherit;
-  cursor: pointer;
 }
 .nav-btns {
   height: 100%;
@@ -114,10 +109,6 @@ header::before {
   background: var(--first-color);
   width: 200px;
   border-radius: 20px;
-  /* display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center; */
 }
 .placeholder {
   position: relative;
@@ -182,4 +173,66 @@ header::before {
   font-size: 2rem;
   margin-left: 10px;
   color: var(--first-font-color);
+}
+@media only screen and (max-width: 1250px) {
+  .header-text {
+    width: 70%;
+  }
+  .header-text-title {
+    font-size: 3.5rem;
+  }
+  .header-text-txt {
+    font-size: 1.5rem;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .header-text {
+    width: 80%;
+  }
+  .header-text-title {
+    font-size: 3rem;
+  }
+  .header-text-txt {
+    font-size: 1.2rem;
+  }
+}
+@media only screen and (max-width: 650px) {
+  .header-text {
+    width: 90%;
+  }
+  .header-text-title {
+    font-size: 2.7rem;
+  }
+  .header-text-txt {
+    font-size: 1rem;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .header-text {
+    width: 95%;
+  }
+  .header-text-title {
+    font-size: 2.5rem;
+  }
+  .header-text-txt {
+    font-size: 1rem;
+  }
+}
+@media only screen and (max-width: 400px) {
+  .nav-btns-btn {
+    margin: 0px 20px;
+  }
+  .nav-btns-btn-links {
+    padding: 10px 10px;
+    font-size: 18px;
+  }
+  .header-text {
+    width: 98%;
+  }
+  .header-text-title {
+    font-size: 2rem;
+  }
+  .header-text-txt {
+    font-size: 0.8rem;
+  }
 }
