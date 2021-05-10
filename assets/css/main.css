@@ -8,6 +8,7 @@
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
   max-height: 1500px;
+  text-decoration: none;
 }
 body {
   background: whitesmoke;
