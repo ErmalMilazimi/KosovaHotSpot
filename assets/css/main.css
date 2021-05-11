@@ -192,6 +192,8 @@ header::before {
   font-size: 1.7rem;
 }
 .select-btn {
+  color: white;
+  font-weight: 500;
   font-size: 1.3rem;
   padding: 10px 0;
   margin-top: 20px;
