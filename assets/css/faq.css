@@ -1,3 +1,7 @@
+body {
+  min-height: 100vh;
+  padding-bottom: 80px;
+}
 nav {
   display: flex;
   justify-content: center;
@@ -18,7 +22,7 @@ nav {
 .header {
   position: relative;
   width: 100%;
-  height: 30vh;
+  height: 300px;
   overflow: hidden;
 }
 .header::before {
@@ -33,7 +37,8 @@ nav {
 .header-bg {
   position: absolute;
   width: 120%;
-  bottom: -100%;
+  top: 50%;
+  transform: translateY(-50%);
   animation: bgAnimate 10s linear alternate infinite;
   z-index: -1;
 }
@@ -53,16 +58,67 @@ nav {
   font-size: 2.5rem;
   color: white;
 }
-
 .container {
   width: 90%;
-  height: 100vh;
   margin: 0 auto;
-  padding: 50px;
-  background-color: lightblue;
+  padding: 50px 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
-
+.details,
+.contactUs {
+  width: 500px;
+}
+.details {
+  background: lightgray;
+  color: white;
+  border-radius: 20px;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  margin: 30px auto;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.details:hover,
+.details:focus {
+  box-shadow: 0px 0px 10px 10px lightgray;
+  background: white;
+  color: black;
+}
+.details:hover .txt-anwer,
+.details:focus .txt-anwer {
+  border-top: 1px solid black;
+}
+.summary {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+.txt-anwer {
+  border-top: 1px solid white;
+}
+.contactUs {
+  display: flex;
+  flex-direction: column;
+}
+.contactUs-title {
+  margin-bottom: 20px;
+}
+.contactUs-mail {
+  color: black;
+  font-size: 1.3rem;
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+}
+.contactUs-mail svg {
+  width: 30px;
+  height: 30px;
+  margin-right: 20px;
+}
 footer {
+  position: absolute;
+  bottom: 0;
   width: 100%;
   background: var(--first-color);
   height: 80px;
@@ -72,21 +128,54 @@ footer {
   color: white;
   font-size: 1.3rem;
 }
-@media only screen and (max-width: 900px) {
-  .header-bg {
-    bottom: -30%;
+@media only screen and (max-height: 800px) {
+  body {
+    padding: 0;
+  }
+  footer {
+    position: static;
+  }
+}
+@media only screen and (max-width: 1300px) {
+  .details,
+  .contactUs {
+    width: 400px;
+  }
+}
+@media only screen and (max-width: 1300px) {
+  .container {
+    padding: 50px 0;
   }
 }
 @media only screen and (max-width: 600px) {
+  .nav-btn-Faq {
+    font-size: 1.2rem;
+    margin: 0;
+    width: 150px;
+  }
   .header-bg {
-    bottom: 0;
+    width: 200%;
+  }
+  .contactUs-title {
+    font-size: 1.3rem;
+  }
+  .contactUs-mail {
+    font-size: 1rem;
   }
 }
 @media only screen and (max-width: 450px) {
   .header-bg {
-    width: 200%;
+    width: 250%;
   }
-  .header-bg {
-    bottom: -10%;
+  .details,
+  .contactUs {
+    width: 300px;
+  }
+  .contactUs-title {
+    font-size: 1rem;
+  }
+  .contactUs-mail svg {
+    width: 20px;
+    height: 20px;
   }
 }

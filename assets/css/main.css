@@ -237,9 +237,9 @@ header::before {
   bottom: 5px;
   right: 5px;
 }
-.icons a i {
-  font-size: 2rem;
-  margin-left: 10px;
+.icons a svg {
+  width: 30px;
+  height: 30px;
   color: var(--first-font-color);
 }
 @media only screen and (max-width: 1250px) {
