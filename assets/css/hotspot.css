@@ -1,3 +1,7 @@
+:root {
+  --img-left: -20%;
+}
+
 body {
   min-height: 100vh;
   padding-bottom: 80px;
@@ -39,7 +43,7 @@ nav {
   width: 120%;
   top: 50%;
   transform: translateY(-50%);
-  animation: bgAnimate 10s linear alternate infinite;
+  animation: bgAnimate 50s linear alternate infinite;
   z-index: -1;
 }
 @keyframes bgAnimate {
@@ -47,7 +51,7 @@ nav {
     left: 0;
   }
   100% {
-    left: -20%;
+    left: var(--img-left);
   }
 }
 .header-txt {
@@ -67,9 +71,42 @@ main {
 }
 .category {
   width: 100%;
-  min-height: 200px;
   background: lightgray;
   margin-bottom: 10px;
+  padding: 10px;
+}
+.category-select {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.category-title {
+  display: inline-block;
+  text-align: center;
+}
+.category-select-qytetet {
+  padding: 0 20px;
+  margin: 0 20px;
+  font-size: 1.3rem;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+.category-select-ambienti {
+  margin: 0 20px;
+  font-size: 1.3rem;
+  padding: 5px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.category-select-ambienti:hover,
+.category-select-ambienti:focus {
+  background: lightcoral;
+}
+.category-selected {
+  width: 100%;
+  height: 10px;
+  border-top: 2px solid black;
 }
 .container {
   width: 100%;
@@ -97,8 +134,14 @@ footer {
   }
 }
 @media only screen and (max-width: 600px) {
+  :root {
+    --img-left: -90%;
+  }
   .header-bg {
     width: 200%;
+  }
+  .header-txt {
+    font-size: 3rem;
   }
 }
 @media only screen and (max-width: 450px) {

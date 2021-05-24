@@ -38,7 +38,6 @@
       </div>
       <p class="loader-txt">Kosova <span>HotSpot</span></p>
     </div>
-
     <nav>
       <a class="nav-btn-Faq" href="index.html">Ballina</a>
       <a class="nav-btn-Faq" href="faq.html">FAQ</a>
@@ -53,8 +52,84 @@
     </section>
 
     <main>
-      <section class="category"></section>
-      <section class="container"></section>
+      <section class="category">
+        <section class="category-select">
+          <h1 class="category-title">Kategorite:</h1>
+          <select name="qytetet" id="qytetet" class="category-select-qytetet">
+            <option value="" hidden>Qyteti</option>
+            <option value="tegjitha">Te gjitha</option>
+            <option value="prishtine">Prishtine</option>
+            <option value="mitrovice">Mitrovice</option>
+            <option value="peje">Peje</option>
+            <option value="prizeren">Prizeren</option>
+            <option value="ferizaj">Ferizaj</option>
+            <option value="gjilan">Gjilan</option>
+            <option value="gjakove">Gjakove</option>
+          </select>
+          <label for="tegjitha" class="category-select-ambienti">
+            <input
+              type="checkbox"
+              name="tegjitha"
+              id="tegjitha"
+              value="tegjitha"
+              onclick="checkActive('tegjitha')"
+            />
+            Te gjitha
+          </label>
+          <label for="liqene" class="category-select-ambienti">
+            <input
+              type="checkbox"
+              name="liqene"
+              id="liqene"
+              value="liqene"
+              onclick="checkActive('liqene')"
+            />
+            Liqene
+          </label>
+          <label for="ujevara" class="category-select-ambienti">
+            <input
+              type="checkbox"
+              name="ujevara"
+              id="ujevara"
+              value="ujevara"
+              onclick="checkActive('ujevara')"
+            />
+            Ujëvara
+          </label>
+          <label for="vila" class="category-select-ambienti">
+            <input
+              type="checkbox"
+              name="vila"
+              id="vila"
+              value="vila"
+              onclick="checkActive('vila')"
+            />
+            Vila
+          </label>
+          <label for="restorante" class="category-select-ambienti">
+            <input
+              type="checkbox"
+              name="restorante"
+              id="restorante"
+              value="restorante"
+              onclick="checkActive('restorante')"
+            />
+            Restorante
+          </label>
+          <label for="tetjera" class="category-select-ambienti">
+            <input
+              type="checkbox"
+              name="tetjera"
+              id="tetjera"
+              value="tetjera"
+              onclick="checkActive('tetjera')"
+            />
+            Të tjera
+          </label>
+        </section>
+        <section class="category-selected"></section>
+      </section>
+      <section class="container">items</section>
     </main>
 
     <footer>

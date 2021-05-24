@@ -1,3 +1,6 @@
+:root {
+  --img-left: -20%;
+}
 body {
   min-height: 100vh;
   padding-bottom: 80px;
@@ -39,7 +42,7 @@ nav {
   width: 120%;
   top: 50%;
   transform: translateY(-50%);
-  animation: bgAnimate 10s linear alternate infinite;
+  animation: bgAnimate 50s linear alternate infinite;
   z-index: -1;
 }
 @keyframes bgAnimate {
@@ -47,7 +50,7 @@ nav {
     left: 0;
   }
   100% {
-    left: -20%;
+    left: var(--img-left);
   }
 }
 .header-txt {
@@ -117,8 +120,8 @@ nav {
   margin-right: 20px;
 }
 footer {
-  position: absolute;
-  bottom: 0;
+  position: relative;
+  bottom: -85px;
   width: 100%;
   background: var(--first-color);
   height: 80px;
@@ -148,6 +151,9 @@ footer {
   }
 }
 @media only screen and (max-width: 600px) {
+  :root {
+    --img-left: -90%;
+  }
   .nav-btn-Faq {
     font-size: 1.2rem;
     margin: 0;
