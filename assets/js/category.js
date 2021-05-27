@@ -63,7 +63,6 @@ function ShowSelected() {
     .join("");
 
   selectedItems.innerHTML = list;
-  console.log(itemsData);
   ShowItems();
 }
 function citySelect() {
@@ -75,17 +74,16 @@ function citySelect() {
   ShowSelected();
 }
 function ShowItems() {
+  let categoryListString = categoryList.join();
   let items = itemsData
     .map((e) => {
       if (categoryList.length === 0) {
         return `
         <section class="container-item">
           <div class="container-item-img">
-            <img src="./assets/img/header/img1.jpg" alt="" />
-            <img src="./assets/img/header/img2.jpg" alt="" />
-            <img src="./assets/img/header/img3.jpg" alt="" />
-            <img src="./assets/img/header/img3.jpg" alt="" />
-            <img src="./assets/img/header/img3.jpg" alt="" />
+            <img src="${e.img[0]}" alt="" />
+            <img src="${e.img[1]}" alt="" />
+            <img src="${e.img[2]}" alt="" />
           </div>
           <div class="container-item-text">
             <h2 class="container-item-text-title">${e.title}</h2>
@@ -99,15 +97,13 @@ function ShowItems() {
           </div>
         </section>
       `;
-      } else if (categoryList.includes(e.category)) {
+      } else if (checkCategory(e.category)) {
         return `
         <section class="container-item">
           <div class="container-item-img">
-            <img src="./assets/img/header/img1.jpg" alt="" />
-            <img src="./assets/img/header/img2.jpg" alt="" />
-            <img src="./assets/img/header/img3.jpg" alt="" />
-            <img src="./assets/img/header/img3.jpg" alt="" />
-            <img src="./assets/img/header/img3.jpg" alt="" />
+            <img src="${e.img[0]}" alt="" />
+            <img src="${e.img[1]}" alt="" />
+            <img src="${e.img[2]}" alt="" />
           </div>
           <div class="container-item-text">
             <h2 class="container-item-text-title">${e.title}</h2>
@@ -135,4 +131,18 @@ function ShowItems() {
   }
 
   container.innerHTML = items;
+}
+function checkCategory(arr) {
+  let idx = 0;
+  for (let i = 0; i < arr.length; i++) {
+    for (let j = 0; j < categoryList.length; j++) {
+      if (arr[i].includes(categoryList[j])) {
+        idx++;
+      }
+    }
+  }
+  if (idx === categoryList.length) {
+    return true;
+  }
+  return false;
 }
