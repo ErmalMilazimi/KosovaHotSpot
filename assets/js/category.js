@@ -1,6 +1,7 @@
 var hotspotCategoryBtn = document.querySelectorAll(
   ".category-select-ambienti input"
 );
+var container = document.getElementById("container");
 var selectedItems = document.getElementById("category-selected");
 var city = document.getElementById("qytetet");
 var currentCity = "";
@@ -54,6 +55,7 @@ function teGjithaBtn(btnValue) {
   }
 }
 function ShowSelected() {
+  categoryList = categoryList.filter((s) => s.length);
   let list = categoryList
     .map((e) => {
       return `<p>${e}</p>`;
@@ -61,6 +63,8 @@ function ShowSelected() {
     .join("");
 
   selectedItems.innerHTML = list;
+  console.log(itemsData);
+  ShowItems();
 }
 function citySelect() {
   removeElement(categoryList, currentCity);
@@ -69,4 +73,66 @@ function citySelect() {
   currentCity = city.value;
 
   ShowSelected();
+}
+function ShowItems() {
+  let items = itemsData
+    .map((e) => {
+      if (categoryList.length === 0) {
+        return `
+        <section class="container-item">
+          <div class="container-item-img">
+            <img src="./assets/img/header/img1.jpg" alt="" />
+            <img src="./assets/img/header/img2.jpg" alt="" />
+            <img src="./assets/img/header/img3.jpg" alt="" />
+            <img src="./assets/img/header/img3.jpg" alt="" />
+            <img src="./assets/img/header/img3.jpg" alt="" />
+          </div>
+          <div class="container-item-text">
+            <h2 class="container-item-text-title">${e.title}</h2>
+            <p class="container-item-text-desc">
+            ${e.desc}
+            </p>
+            <p class="container-item-text-location">
+              <a href=""><i class="fas fa-map-marker-alt"></i>
+              ${e.location}</a>
+            </p>
+          </div>
+        </section>
+      `;
+      } else if (categoryList.includes(e.category)) {
+        return `
+        <section class="container-item">
+          <div class="container-item-img">
+            <img src="./assets/img/header/img1.jpg" alt="" />
+            <img src="./assets/img/header/img2.jpg" alt="" />
+            <img src="./assets/img/header/img3.jpg" alt="" />
+            <img src="./assets/img/header/img3.jpg" alt="" />
+            <img src="./assets/img/header/img3.jpg" alt="" />
+          </div>
+          <div class="container-item-text">
+            <h2 class="container-item-text-title">${e.title}</h2>
+            <p class="container-item-text-desc">
+            ${e.desc}
+            </p>
+            <p class="container-item-text-location">
+              <a href=""><i class="fas fa-map-marker-alt"></i>
+              ${e.location}</a>
+            </p>
+          </div>
+        </section>
+      `;
+      }
+    })
+    .join("");
+  if (items.length === 0) {
+    items = `
+        <section class="container-item-nothig">
+      <h1>Per momentin nuk e kemi te regjistruar vendin e kerkuar!</h1>
+      <p>Nese dini ndonje vend te bukur dhe deshironi ta shfaqni ketu</p>
+      <a href="faq.html">Klikoni ketu</a>
+    </section>
+      `;
+  }
+
+  container.innerHTML = items;
 }

@@ -21,7 +21,7 @@
     />
   </head>
 
-  <body>
+  <body onload="ShowItems()">
     <div class="loader">
       <div class="loader-img">
         <div class="svg-route">
@@ -68,7 +68,7 @@
             onchange="citySelect()"
           >
             <option value="" hidden>Qyteti</option>
-            <option value="tegjitha">Te gjitha</option>
+            <option value="">Gjith Kosova</option>
             <option value="prishtine">Prishtine</option>
             <option value="mitrovice">Mitrovice</option>
             <option value="peje">Peje</option>
@@ -86,6 +86,16 @@
               onclick="checkActive('tegjitha')"
             />
             Te gjitha
+          </label>
+          <label for="male" class="category-select-ambienti">
+            <input
+              type="checkbox"
+              name="male"
+              id="male"
+              value="male"
+              onclick="checkActive('male')"
+            />
+            Male
           </label>
           <label for="liqene" class="category-select-ambienti">
             <input
@@ -140,32 +150,13 @@
         </section>
         <section class="category-selected" id="category-selected"></section>
       </section>
-      <section class="container">
-        <section class="container-item">
-          <div class="container-item-img">
-            <img src="./assets/img/header/img1.jpg" alt="" />
-            <img src="./assets/img/header/img2.jpg" alt="" />
-            <img src="./assets/img/header/img3.jpg" alt="" />
-          </div>
-          <div class="container-item-text">
-            <h2 class="container-item-text-title">Rugova</h2>
-            <p class="container-item-text-desc">
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis,
-              nam.
-            </p>
-            <a href="" class="container-item-text-location"
-              ><i class="fas fa-map-marker-alt"></i>Rugova</a
-            >
-          </div>
-        </section>
-      </section>
+      <section class="container" id="container"></section>
     </main>
-
     <footer>
       <p>&copy Kosova HotSpot 2021</p>
     </footer>
-
     <script src="./assets/js/main.js"></script>
+    <script src="./assets/js/data.js"></script>
     <script src="./assets/js/category.js"></script>
   </body>
 </html>
