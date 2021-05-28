@@ -68,9 +68,7 @@ function ShowSelected() {
   ShowItems();
 }
 function citySelect() {
-  // removeElement(categoryList, currentCity);
   currentCity = city.value;
-  // categoryList.push(city.value);
 
   ShowSelected();
 }
@@ -121,27 +119,6 @@ function ShowItems() {
         </section>
       `;
       }
-      // else if (checkCategory(e.category)) {
-      //   return `
-      //   <section class="container-item">
-      //     <div class="container-item-img">
-      //       <img src="${e.img[0]}" alt="" />
-      //       <img src="${e.img[1]}" alt="" />
-      //       <img src="${e.img[2]}" alt="" />
-      //     </div>
-      //     <div class="container-item-text">
-      //       <h2 class="container-item-text-title">${e.title}</h2>
-      //       <p class="container-item-text-desc">
-      //       ${e.desc}
-      //       </p>
-      //       <p class="container-item-text-location">
-      //         <a href=""><i class="fas fa-map-marker-alt"></i>
-      //         ${e.location}</a>
-      //       </p>
-      //     </div>
-      //   </section>
-      // `;
-      // }
     })
     .join("");
   if (items.length === 0) {
@@ -158,31 +135,25 @@ function ShowItems() {
 }
 function checkCategory(arr) {
   if (currentCity === "" || currentCity === null) {
-    for (let i = 0; i < arr.length; i++) {
-      for (let j = 0; j < categoryList.length; j++) {
-        if (arr[i].includes(categoryList[j])) {
-          return true;
-        }
+    for (let j = 0; j < categoryList.length; j++) {
+      if (arr.includes(categoryList[j])) {
+        return true;
       }
     }
-    console.log("nuk ka qytet");
   } else {
-    for (let i = 0; i < arr.length; i++) {
-      if (arr[i].includes(currentCity)) {
-        if (categoryList.length > 0) {
-          for (let x = 0; x < arr.length; x++) {
-            for (let j = 0; j < categoryList.length; j++) {
-              if (arr[x].includes(categoryList[j])) {
-                return true;
-              }
-            }
+    if (arr.includes(currentCity)) {
+      if (categoryList.length > 0) {
+        for (let i = 0; i < categoryList.length; i++) {
+          if (arr.includes(categoryList[i])) {
+            console.log("object true");
+            return true;
           }
-        } else {
-          return true;
+          console.log("object false");
         }
+      } else {
+        return true;
       }
     }
-    console.log("ka qytet");
   }
   return false;
 }
