@@ -157,7 +157,6 @@ function ShowItems() {
   container.innerHTML = items;
 }
 function checkCategory(arr) {
-  // let newCategory = categoryList.filter();
   if (currentCity === "" || currentCity === null) {
     for (let i = 0; i < arr.length; i++) {
       for (let j = 0; j < categoryList.length; j++) {

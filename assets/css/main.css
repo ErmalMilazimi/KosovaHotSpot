@@ -141,8 +141,7 @@ header {
   display: flex;
   justify-content: center;
   overflow: hidden;
-  background: black;
-  background-image: url("../img/header/img1.jpg");
+  /* background-image: url("../img/header/img1.jpg"); */
   background-position-x: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -155,6 +154,22 @@ header::before {
   top: 0;
   left: 0;
   background: rgba(0, 0, 0, 0.5);
+  pointer-events: none;
+}
+.header-bg {
+  pointer-events: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+.header-bg img {
+  pointer-events: none;
+  position: absolute;
+  width: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.3s;
 }
 .header-text {
   color: var(--first-font-color);

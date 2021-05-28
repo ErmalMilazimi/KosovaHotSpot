@@ -1,17 +1,16 @@
-var img = [
-  "assets/img/header/img1.jpg",
-  "assets/img/header/img2.jpg",
-  "assets/img/header/img3.jpg",
-  "assets/img/header/img4.jpg",
-  "assets/img/header/img5.jpg",
-  "assets/img/header/img6.jpg",
-];
+var img = document.querySelectorAll(".header-bg img");
 let idx = 0;
-var header = document.querySelector("header");
+let idx2 = 1;
 
 const changeBg = () => {
-  header.style.backgroundImage = `url(${img[idx++]})`;
-  if (idx === img.length) idx = 0;
+  img[idx++].style = "opacity:0";
+  img[idx2++].style = "opacity:1";
+  if (idx === img.length) {
+    idx = 0;
+  }
+  if (idx2 === img.length) {
+    idx2 = 0;
+  }
 };
 
 setInterval(changeBg, 5000);
