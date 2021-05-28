@@ -19,7 +19,7 @@ function removeElement(arr) {
   }
   return arr;
 }
-function checkActive(categoryName) {
+const checkActive = (categoryName) => {
   const firstBtn = hotspotCategoryBtn[0];
   if (categoryName === "tegjitha") {
     teGjithaBtn(firstBtn);
@@ -38,8 +38,8 @@ function checkActive(categoryName) {
     }
   }
   ShowSelected();
-}
-function teGjithaBtn(btnValue) {
+};
+const teGjithaBtn = (btnValue) => {
   if (btnValue.checked) {
     for (let i = 1; i < hotspotCategoryBtn.length; i++) {
       hotspotCategoryBtn[i].checked = true;
@@ -53,8 +53,8 @@ function teGjithaBtn(btnValue) {
     }
     categoryList = [];
   }
-}
-function ShowSelected() {
+};
+const ShowSelected = () => {
   categoryList = categoryList.filter((s) => s.length);
   let list = categoryList
     .map((e) => {
@@ -66,18 +66,19 @@ function ShowSelected() {
   }
   selectedItems.innerHTML = list;
   ShowItems();
-}
-function citySelect() {
+};
+const citySelect = () => {
   currentCity = city.value;
 
   ShowSelected();
-}
-function ShowItems() {
+};
+const ShowItems = () => {
+  let id = 1;
   let items = itemsData
     .map((e) => {
       if (checkCategory(e.category)) {
         return `
-        <section class="container-item">
+        <section class="container-item" id="${id++}" onclick="popup(this.id)">
           <div class="container-item-img">
             <img src="${e.img[0]}" alt="" />
             <img src="${e.img[1]}" alt="" />
@@ -100,7 +101,7 @@ function ShowItems() {
         (currentCity === "" || currentCity === null)
       ) {
         return `
-        <section class="container-item">
+        <section class="container-item" id="${id++}" onclick="popup(this.id)">
           <div class="container-item-img">
             <img src="${e.img[0]}" alt="" />
             <img src="${e.img[1]}" alt="" />
@@ -132,8 +133,8 @@ function ShowItems() {
   }
 
   container.innerHTML = items;
-}
-function checkCategory(arr) {
+};
+const checkCategory = (arr) => {
   if (currentCity === "" || currentCity === null) {
     for (let j = 0; j < categoryList.length; j++) {
       if (arr.includes(categoryList[j])) {
@@ -145,10 +146,8 @@ function checkCategory(arr) {
       if (categoryList.length > 0) {
         for (let i = 0; i < categoryList.length; i++) {
           if (arr.includes(categoryList[i])) {
-            console.log("object true");
             return true;
           }
-          console.log("object false");
         }
       } else {
         return true;
@@ -156,4 +155,4 @@ function checkCategory(arr) {
     }
   }
   return false;
-}
+};
