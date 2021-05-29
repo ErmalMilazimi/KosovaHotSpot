@@ -79,6 +79,7 @@ const ShowItems = () => {
       if (checkCategory(e.category)) {
         return `
         <section class="container-item" id="${id++}" onclick="popup(this.id)">
+        <button id="btn${id - 1}"><span>+</span></button>
           <div class="container-item-img">
             <img src="${e.img[0]}" alt="" />
             <img src="${e.img[1]}" alt="" />
@@ -95,6 +96,7 @@ const ShowItems = () => {
             </p>
           </div>
         </section>
+        ---
       `;
       } else if (
         categoryList.length === 0 &&
@@ -102,6 +104,7 @@ const ShowItems = () => {
       ) {
         return `
         <section class="container-item" id="${id++}" onclick="popup(this.id)">
+        <button id="btn${id - 1}"><span>+</span></button>
           <div class="container-item-img">
             <img src="${e.img[0]}" alt="" />
             <img src="${e.img[1]}" alt="" />
@@ -118,6 +121,7 @@ const ShowItems = () => {
             </p>
           </div>
         </section>
+        ---
       `;
       }
     })
@@ -131,8 +135,8 @@ const ShowItems = () => {
         </section>
       `;
   }
-
-  container.innerHTML = items;
+  let itemsArr = items.split("---");
+  pagination(itemsArr);
 };
 const checkCategory = (arr) => {
   if (currentCity === "" || currentCity === null) {
@@ -155,4 +159,14 @@ const checkCategory = (arr) => {
     }
   }
   return false;
+};
+const pagination = (itemsArr) => {
+  let itemsString = itemsArr
+    .map((e) => {
+      return e;
+    })
+    .join("");
+
+  console.log(itemsArr.length - 1);
+  container.innerHTML = itemsString;
 };

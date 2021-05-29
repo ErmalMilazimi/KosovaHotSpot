@@ -1,9 +1,11 @@
 const popup = (element) => {
   var div = document.getElementById(element);
-  if (div.className.includes("popup")) {
+  var btn = document.getElementById("btn" + element);
+  div.classList = "popup";
+
+  btn.addEventListener("click", (e) => {
+    e.preventDefault();
+    e.stopPropagation();
     div.classList = "container-item";
-    console.log("QET");
-  } else {
-    div.classList = "popup";
-  }
+  });
 };
