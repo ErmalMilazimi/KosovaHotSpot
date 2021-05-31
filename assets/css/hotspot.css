@@ -206,7 +206,6 @@ main {
   height: calc(100% + 1px);
   padding: 100px 200px;
   top: 0;
-  bottom: 0;
   left: 50%;
   transform: translateX(-50%);
   z-index: 100;
@@ -214,8 +213,8 @@ main {
 .popup > button {
   display: block;
   position: absolute;
-  top: 20px;
-  right: 20px;
+  top: 60px;
+  right: 200px;
   width: 30px;
   height: 30px;
   border: none;
@@ -241,8 +240,7 @@ main {
   justify-content: center;
   padding-bottom: 20px;
 }
-.popup .container-item-img::before {
-  content: "";
+.popup .slider-img {
   position: absolute;
   width: 80%;
   height: 70%;
@@ -284,15 +282,8 @@ main {
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
+  text-align: center;
 }
-/* .popup .container-item-text-location a {
-  color: black;
-  font-size: 1.2rem;
-}
-.popup .container-item-text-location i {
-  margin-right: 20px;
-  color: var(--first-color);
-} */
 footer {
   position: relative;
   width: 100%;
@@ -311,14 +302,21 @@ footer {
   .popup {
     padding: 70px 100px;
   }
+  .popup > button {
+    top: 30px;
+    right: 100px;
+  }
 }
 @media only screen and (max-width: 800px) {
   main {
     padding: 10px 50px;
   }
-
   .popup {
     padding: 70px;
+  }
+  .popup > button {
+    top: 30px;
+    right: 70px;
   }
 }
 @media only screen and (max-width: 600px) {
@@ -334,9 +332,12 @@ footer {
   .header-txt {
     font-size: 3rem;
   }
-
   .popup {
     padding: 70px 50px;
+  }
+  .popup > button {
+    top: 30px;
+    right: 50px;
   }
 }
 @media only screen and (max-width: 450px) {
@@ -353,8 +354,14 @@ footer {
   .container-item-text {
     width: 80%;
     min-height: 200px;
+    height: auto;
+    justify-content: center;
   }
   .popup {
     padding: 70px 20px;
+  }
+  .popup > button {
+    top: 30px;
+    right: 20px;
   }
 }

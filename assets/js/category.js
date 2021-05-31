@@ -74,16 +74,21 @@ const citySelect = () => {
 };
 const ShowItems = () => {
   let id = 1;
+  let sliderId = 1;
   let items = itemsData
     .map((e) => {
+      let imgs = e.img
+        .map((g) => {
+          return `<img src="${g}" id="${id++}" alt="" />`;
+        })
+        .join("");
       if (checkCategory(e.category)) {
         return `
         <section class="container-item" id="${id++}" onclick="popup(this.id)">
         <button id="btn${id - 1}"><span>+</span></button>
           <div class="container-item-img">
-            <img src="${e.img[0]}" alt="" />
-            <img src="${e.img[1]}" alt="" />
-            <img src="${e.img[2]}" alt="" />
+            ${imgs}
+            <div class="slider-img" id="slider-img"></div>
           </div>
           <div class="container-item-text">
             <h2 class="container-item-text-title">${e.title}</h2>
@@ -106,9 +111,8 @@ const ShowItems = () => {
         <section class="container-item" id="${id++}" onclick="popup(this.id)">
         <button id="btn${id - 1}"><span>+</span></button>
           <div class="container-item-img">
-            <img src="${e.img[0]}" alt="" />
-            <img src="${e.img[1]}" alt="" />
-            <img src="${e.img[2]}" alt="" />
+            ${imgs}
+            <div class="slider-img"></div>
           </div>
           <div class="container-item-text">
             <h2 class="container-item-text-title">${e.title}</h2>
