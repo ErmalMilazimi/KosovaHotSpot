@@ -1,7 +1,8 @@
 var hotspotCategoryBtn = document.querySelectorAll(
   ".category-select-ambienti input"
 );
-var container = document.getElementById("container");
+var container = document.getElementById("items-container");
+var pageNumbers = document.getElementById("page-numbers");
 var selectedItems = document.getElementById("category-selected");
 var city = document.getElementById("qytetet");
 var currentCity = "";
@@ -171,6 +172,13 @@ const pagination = (itemsArr) => {
     })
     .join("");
 
-  console.log(itemsArr.length - 1);
+  let pages = itemsArr.length - 1;
+  let numbers = "";
+
+  for (let i = 0; i < pages; i++) {
+    numbers += `<p>${i + 1}</p>`;
+  }
+
   container.innerHTML = itemsString;
+  pageNumbers.innerHTML = numbers;
 };

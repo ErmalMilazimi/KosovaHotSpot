@@ -1,4 +1,4 @@
-var img = document.querySelectorAll(".header-bg img");
+var img = document.querySelectorAll(".header-bg-img");
 let idx = 0;
 let idx2 = 1;
 

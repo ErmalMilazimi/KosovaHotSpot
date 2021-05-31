@@ -65,10 +65,150 @@ nav {
   position: absolute;
   top: 0%;
   left: 80%;
+  -webkit-animation: svgPin 15s linear infinite;
+  -moz-animation: svgPin 15s linear infinite;
+  -ms-animation: svgPin 15s linear infinite;
+  -o-animation: svgPin 15s linear infinite;
   animation: svgPin 15s linear infinite;
 }
 .loader svg path {
   fill: var(--first-color);
+}
+@-webkit-keyframes svgPin {
+  0% {
+    top: -10%;
+    left: 50%;
+  }
+  14% {
+    top: -10%;
+    left: 0%;
+  }
+  29% {
+    top: 40%;
+    left: -10%;
+  }
+  43% {
+    top: 70%;
+    left: 20%;
+  }
+  58% {
+    top: 30%;
+    left: 30%;
+  }
+  72% {
+    top: 70%;
+    left: 50%;
+  }
+  88% {
+    top: 0%;
+    left: 80%;
+  }
+  100% {
+    top: -10%;
+    left: 50%;
+  }
+}
+@-moz-keyframes svgPin {
+  0% {
+    top: -10%;
+    left: 50%;
+  }
+  14% {
+    top: -10%;
+    left: 0%;
+  }
+  29% {
+    top: 40%;
+    left: -10%;
+  }
+  43% {
+    top: 70%;
+    left: 20%;
+  }
+  58% {
+    top: 30%;
+    left: 30%;
+  }
+  72% {
+    top: 70%;
+    left: 50%;
+  }
+  88% {
+    top: 0%;
+    left: 80%;
+  }
+  100% {
+    top: -10%;
+    left: 50%;
+  }
+}
+@-ms-keyframes svgPin {
+  0% {
+    top: -10%;
+    left: 50%;
+  }
+  14% {
+    top: -10%;
+    left: 0%;
+  }
+  29% {
+    top: 40%;
+    left: -10%;
+  }
+  43% {
+    top: 70%;
+    left: 20%;
+  }
+  58% {
+    top: 30%;
+    left: 30%;
+  }
+  72% {
+    top: 70%;
+    left: 50%;
+  }
+  88% {
+    top: 0%;
+    left: 80%;
+  }
+  100% {
+    top: -10%;
+    left: 50%;
+  }
+}
+@-o-keyframes svgPin {
+  0% {
+    top: -10%;
+    left: 50%;
+  }
+  14% {
+    top: -10%;
+    left: 0%;
+  }
+  29% {
+    top: 40%;
+    left: -10%;
+  }
+  43% {
+    top: 70%;
+    left: 20%;
+  }
+  58% {
+    top: 30%;
+    left: 30%;
+  }
+  72% {
+    top: 70%;
+    left: 50%;
+  }
+  88% {
+    top: 0%;
+    left: 80%;
+  }
+  100% {
+    top: -10%;
+    left: 50%;
+  }
 }
 @keyframes svgPin {
   0% {
@@ -166,59 +306,64 @@ header::before {
   pointer-events: none;
   z-index: -1;
 }
-.header-bg img {
+.header-bg-img {
   pointer-events: none;
   position: absolute;
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: left;
+  left: 0;
+  right: auto;
   opacity: 0;
-  -webkit-animation: bgTransition 30s linear alternate infinite;
-  -moz-animation: bgTransition 30s linear alternate infinite;
-  -ms-animation: bgTransition 30s linear alternate infinite;
-  -o-animation: bgTransition 30s linear alternate infinite;
-  animation: bgTransition 30s infinite linear alternate;
   transition: opacity 2s;
+}
+.header-bg-img1 {
+  background: url("../img/header/img1.webp");
+}
+.header-bg-img2 {
+  background: url("../img/header/img2.webp");
+}
+.header-bg-img3 {
+  background: url("../img/header/img3.webp");
+}
+.header-bg-img4 {
+  background: url("../img/header/img4.webp");
+}
+.header-bg-img5 {
+  background: url("../img/header/img5.webp");
+}
+.header-bg-img6 {
+  background: url("../img/header/img6.webp");
+}
+.header-bg-img1,
+.header-bg-img2,
+.header-bg-img3,
+.header-bg-img4,
+.header-bg-img5,
+.header-bg-img6 {
+  background-position: left;
+  background-repeat: no-repeat;
+  background-size: cover;
+  animation-name: bgTransition;
+  animation-duration: 30s;
+  animation-direction: alternate;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
 }
 @-webkit-keyframes bgTransition {
   0% {
-    object-position: left;
+    background-position: left;
   }
   100% {
-    object-position: right;
-  }
-}
-@-moz-keyframes bgTransition {
-  0% {
-    object-position: left;
-  }
-  100% {
-    object-position: right;
-  }
-}
-@-ms-keyframes bgTransition {
-  0% {
-    object-position: left;
-  }
-  100% {
-    object-position: right;
-  }
-}
-@-o-keyframes bgTransition {
-  0% {
-    object-position: left;
-  }
-  100% {
-    object-position: right;
+    background-position: right;
   }
 }
 @keyframes bgTransition {
   0% {
-    object-position: left;
+    background-position: left;
   }
   100% {
-    object-position: right;
+    background-position: right;
   }
 }
 .header-text {
@@ -267,33 +412,9 @@ header::before {
     box-shadow: 0px 0px 5px 3px white, inset 0px 0px 2px 2px white;
   }
 }
-@-moz-keyframes btnShadow {
-  from {
-    box-shadow: 0px 0px 1px 1px white, inset 0px 0px 0px 0px white;
-  }
-  to {
-    box-shadow: 0px 0px 5px 3px white, inset 0px 0px 2px 2px white;
-  }
-}
-@-ms-keyframes btnShadow {
-  from {
-    box-shadow: 0px 0px 1px 1px white, inset 0px 0px 0px 0px white;
-  }
-  to {
-    box-shadow: 0px 0px 5px 3px white, inset 0px 0px 2px 2px white;
-  }
-}
-@-o-keyframes btnShadow {
-  from {
-    box-shadow: 0px 0px 1px 1px white, inset 0px 0px 0px 0px white;
-  }
-  to {
-    box-shadow: 0px 0px 5px 3px white, inset 0px 0px 2px 2px white;
-  }
-}
 @keyframes btnShadow {
   from {
-    box-shadow: 0px 0px 1px 1px white, inset 0px 0px 0px 0px white;
+    box-shadow: 0px 0px 0.5px 0.5px white, inset 0px 0px 0px 0px white;
   }
   to {
     box-shadow: 0px 0px 5px 3px white, inset 0px 0px 2px 2px white;

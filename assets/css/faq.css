@@ -116,6 +116,7 @@ nav {
   margin: 30px auto;
   cursor: pointer;
   transition: 0.3s;
+  outline: none;
 }
 .details:hover,
 .details:focus {
@@ -130,6 +131,7 @@ nav {
 .summary {
   font-weight: bold;
   font-size: 1.2rem;
+  outline: none;
 }
 .txt-answer {
   border-top: 1px solid white;
