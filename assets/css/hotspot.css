@@ -1,6 +1,3 @@
-:root {
-  --img-left: -20%;
-}
 nav {
   display: flex;
   justify-content: center;
@@ -35,18 +32,55 @@ nav {
 }
 .header-bg {
   position: absolute;
-  width: 120%;
-  top: 50%;
-  transform: translateY(-50%);
-  animation: bgAnimate 50s linear alternate infinite;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: left;
+  -webkit-animation: bgAnimate 30s linear alternate infinite;
+  -moz-animation: bgAnimate 30s linear alternate infinite;
+  -ms-animation: bgAnimate 30s linear alternate infinite;
+  -o-animation: bgAnimate 30s linear alternate infinite;
+  animation: bgAnimate 30s linear alternate infinite;
   z-index: -1;
+}
+@-webkit-keyframes bgAnimate {
+  0% {
+    object-position: left;
+  }
+  100% {
+    object-position: right;
+  }
+}
+@-moz-keyframes bgAnimate {
+  0% {
+    object-position: left;
+  }
+  100% {
+    object-position: right;
+  }
+}
+@-ms-keyframes bgAnimate {
+  0% {
+    object-position: left;
+  }
+  100% {
+    object-position: right;
+  }
+}
+@-o-keyframes bgAnimate {
+  0% {
+    object-position: left;
+  }
+  100% {
+    object-position: right;
+  }
 }
 @keyframes bgAnimate {
   0% {
-    left: 0;
+    object-position: left;
   }
   100% {
-    left: var(--img-left);
+    object-position: right;
   }
 }
 .header-txt {
@@ -320,14 +354,8 @@ footer {
   }
 }
 @media only screen and (max-width: 600px) {
-  :root {
-    --img-left: -90%;
-  }
   main {
     padding: 10px 30px;
-  }
-  .header-bg {
-    width: 200%;
   }
   .header-txt {
     font-size: 3rem;
@@ -341,9 +369,6 @@ footer {
   }
 }
 @media only screen and (max-width: 450px) {
-  .header-bg {
-    width: 250%;
-  }
   .container-item {
     flex-direction: column;
   }

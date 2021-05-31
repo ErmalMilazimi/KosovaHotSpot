@@ -174,8 +174,44 @@ header::before {
   object-fit: cover;
   object-position: left;
   opacity: 0;
+  -webkit-animation: bgTransition 30s linear alternate infinite;
+  -moz-animation: bgTransition 30s linear alternate infinite;
+  -ms-animation: bgTransition 30s linear alternate infinite;
+  -o-animation: bgTransition 30s linear alternate infinite;
   animation: bgTransition 30s infinite linear alternate;
   transition: opacity 2s;
+}
+@-webkit-keyframes bgTransition {
+  0% {
+    object-position: left;
+  }
+  100% {
+    object-position: right;
+  }
+}
+@-moz-keyframes bgTransition {
+  0% {
+    object-position: left;
+  }
+  100% {
+    object-position: right;
+  }
+}
+@-ms-keyframes bgTransition {
+  0% {
+    object-position: left;
+  }
+  100% {
+    object-position: right;
+  }
+}
+@-o-keyframes bgTransition {
+  0% {
+    object-position: left;
+  }
+  100% {
+    object-position: right;
+  }
 }
 @keyframes bgTransition {
   0% {
@@ -216,21 +252,51 @@ header::before {
   border-radius: 20px;
   overflow: hidden;
   cursor: pointer;
+  -webkit-animation: btnShadow 3s linear alternate infinite;
+  -moz-animation: btnShadow 3s linear alternate infinite;
+  -ms-animation: btnShadow 3s linear alternate infinite;
+  -o-animation: btnShadow 3s linear alternate infinite;
   animation: btnShadow 3s linear alternate infinite;
-  transition: 0.4s;
+  transition: 0.4s ease;
+}
+@-webkit-keyframes btnShadow {
+  from {
+    box-shadow: 0px 0px 1px 1px white, inset 0px 0px 0px 0px white;
+  }
+  to {
+    box-shadow: 0px 0px 5px 3px white, inset 0px 0px 2px 2px white;
+  }
+}
+@-moz-keyframes btnShadow {
+  from {
+    box-shadow: 0px 0px 1px 1px white, inset 0px 0px 0px 0px white;
+  }
+  to {
+    box-shadow: 0px 0px 5px 3px white, inset 0px 0px 2px 2px white;
+  }
+}
+@-ms-keyframes btnShadow {
+  from {
+    box-shadow: 0px 0px 1px 1px white, inset 0px 0px 0px 0px white;
+  }
+  to {
+    box-shadow: 0px 0px 5px 3px white, inset 0px 0px 2px 2px white;
+  }
+}
+@-o-keyframes btnShadow {
+  from {
+    box-shadow: 0px 0px 1px 1px white, inset 0px 0px 0px 0px white;
+  }
+  to {
+    box-shadow: 0px 0px 5px 3px white, inset 0px 0px 2px 2px white;
+  }
 }
 @keyframes btnShadow {
-  0% {
-    box-shadow: 0px -2px 2px white, inset 0px -2px 2px white;
+  from {
+    box-shadow: 0px 0px 1px 1px white, inset 0px 0px 0px 0px white;
   }
-  33% {
-    box-shadow: 2px 0px 2px white, inset 2px 0px 2px white;
-  }
-  67% {
-    box-shadow: 0px 2px 2px white, inset 0px 2px 2px white;
-  }
-  100% {
-    box-shadow: -2px 0px 5px white, inset -2px 0px 5px white;
+  to {
+    box-shadow: 0px 0px 5px 3px white, inset 0px 0px 2px 2px white;
   }
 }
 .select-btn:hover,
