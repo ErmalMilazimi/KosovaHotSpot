@@ -386,39 +386,55 @@ header::before {
   width: 80%;
   font-size: 1.7rem;
 }
+.select-btn-container {
+  position: relative;
+  height: 58px;
+  padding: 3px;
+  overflow: hidden;
+  margin-top: 20px;
+  border-radius: 20px;
+}
+.select-btn-container::before {
+  content: "";
+  position: absolute;
+  background: white;
+  width: 10px;
+  height: 220px;
+  top: -86px;
+  left: 96px;
+  transform: rotate(0deg);
+  -webkit-animation: btnAnimate 3s linear infinite;
+  animation: btnAnimate 3s linear infinite;
+  z-index: -1;
+}
+@-webkit-keyframes btnAnimate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes btnAnimate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 .select-btn {
+  display: inline-block;
   color: white;
   font-weight: 500;
   font-size: 1.3rem;
   padding: 10px 0;
-  margin-top: 20px;
   width: 200px;
   background: var(--first-color);
   border-radius: 20px;
   overflow: hidden;
   cursor: pointer;
-  -webkit-animation: btnShadow 3s linear alternate infinite;
-  -moz-animation: btnShadow 3s linear alternate infinite;
-  -ms-animation: btnShadow 3s linear alternate infinite;
-  -o-animation: btnShadow 3s linear alternate infinite;
-  animation: btnShadow 3s linear alternate infinite;
   transition: 0.4s ease;
-}
-@-webkit-keyframes btnShadow {
-  from {
-    box-shadow: 0px 0px 1px 1px white, inset 0px 0px 0px 0px white;
-  }
-  to {
-    box-shadow: 0px 0px 5px 3px white, inset 0px 0px 2px 2px white;
-  }
-}
-@keyframes btnShadow {
-  from {
-    box-shadow: 0px 0px 0.5px 0.5px white, inset 0px 0px 0px 0px white;
-  }
-  to {
-    box-shadow: 0px 0px 5px 3px white, inset 0px 0px 2px 2px white;
-  }
 }
 .select-btn:hover,
 .select-btn:focus {
