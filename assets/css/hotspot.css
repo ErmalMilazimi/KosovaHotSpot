@@ -198,6 +198,20 @@ main {
   flex-direction: column;
   justify-content: space-between;
 }
+.container-item-text-desc {
+  position: relative;
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+  overflow: hidden;
+}
+.container-item-text-desc::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 30px;
+  bottom: 0;
+  background: linear-gradient(transparent, whitesmoke);
+}
 .container-item-text-location a {
   color: black;
   font-size: 1.2rem;
@@ -250,24 +264,31 @@ main {
   width: 100%;
   height: 80%;
   display: flex;
-  align-items: flex-end;
-  justify-content: center;
+  flex-direction: column-reverse;
+  align-items: center;
+  justify-content: space-around;
   padding-bottom: 20px;
   pointer-events: all;
 }
 .popup .slider-img {
-  position: absolute;
-  width: 80%;
-  height: 70%;
+  margin: 10px;
+  width: 100%;
+  height: 100%;
   top: 10px;
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
 }
+.popup .container-item-img-imgs {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
 .popup .container-item-img img {
   border: 2px solid white;
   position: static;
-  width: 100px;
+  width: 50px;
   height: 50px;
   opacity: 1;
   cursor: pointer;
@@ -285,6 +306,9 @@ main {
   align-items: center;
   text-align: center;
 }
+.popup .container-item-text-desc::before {
+  display: none;
+}
 #page-numbers {
   margin-top: 25px;
   width: 100%;
@@ -295,7 +319,7 @@ main {
   flex-wrap: wrap;
   text-align: center;
 }
-#page-numbers label {
+.pageNumbers {
   display: block;
   background: var(--first-color);
   color: white;
@@ -307,16 +331,16 @@ main {
   cursor: pointer;
   transition: 0.3s ease;
 }
-#page-numbers .pageCheck:checked + label {
+.pageNumbers:hover,
+.pageNumbers:focus {
+  background: rgb(114, 27, 27);
+  color: white;
+}
+.btnActive {
   color: var(--first-color);
   box-shadow: 0 0 5px 2px var(--first-color),
     inset 0 0 5px 2px var(--first-color);
   background: white;
-}
-#page-numbers label:hover,
-#page-numbers label:focus {
-  background: rgb(114, 27, 27);
-  color: white;
 }
 footer {
   position: relative;
@@ -394,9 +418,11 @@ footer {
   .popup {
     overflow-y: scroll;
   }
+  .popup .slider-img {
+    height: 400px;
+  }
   .popup .container-item-img {
     height: 500px;
-    padding-top: 400px;
     width: 100%;
   }
   .popup .container-item-text {

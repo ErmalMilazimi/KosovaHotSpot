@@ -1,25 +1,33 @@
 var itemsData = [
   {
-    category: ["male", "prishtine"],
+    category: ["ujevara", "prizeren"],
     img: [
-      "./assets/img/header/img3.webp",
-      "./assets/img/header/img1.webp",
-      "./assets/img/header/img2.webp",
+      "./assets/img/locations/ujevara_mirushes/4.webp",
+      "./assets/img/locations/ujevara_mirushes/1.webp",
+      "./assets/img/locations/ujevara_mirushes/2.webp",
+      "./assets/img/locations/ujevara_mirushes/3.webp",
     ],
-    title: "male prishtine",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non, reiciendis.",
-    location: "Rugova",
+    title: "Ujëvarat e Mirushës",
+    desc: "Ujëvarat e Mirushës janë pjesë e një parku me rëndësi të veçantë natyrore, shkencore, kulturore dhe turistike. Sipas IUCN, zona i përket kategorisë ”Peizazh i mbrojtur”, kurse rrjedha e lumit Mirusha i përket kategorisë ”Monument natyror”.",
+    location: "Llapçevë, Malishevë",
+    href: "https://goo.gl/maps/ncPZgaLCN34uT21MA",
   },
   {
-    category: ["restorante", "prishtine"],
+    category: ["male", "prizeren"],
     img: [
-      "./assets/img/header/img1.webp",
-      "./assets/img/header/img2.webp",
-      "./assets/img/header/img3.webp",
+      "./assets/img/locations/bjeshket_e_sharrit/1.webp",
+      "./assets/img/locations/bjeshket_e_sharrit/2.webp",
+      "./assets/img/locations/bjeshket_e_sharrit/3.webp",
+      "./assets/img/locations/bjeshket_e_sharrit/4.webp",
+      "./assets/img/locations/bjeshket_e_sharrit/5.webp",
+      "./assets/img/locations/bjeshket_e_sharrit/6.webp",
+      "./assets/img/locations/bjeshket_e_sharrit/7.webp",
+      "./assets/img/locations/bjeshket_e_sharrit/8.webp",
     ],
-    title: "restorante prishtine",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non, reiciendis.",
-    location: "Rugova",
+    title: "Bjeshkët e Sharrit",
+    desc: 'Maja më e lartë nga fillojnë keto vargmale, mendohet se emrin e ka me origjinen frenge, "Pamje e bukur" "le bonne ten" e qe mbeti pastaj ne popull si Maja e Lubotenit e cila kulminon 2553m mbi nivelin e detit.',
+    location: "Jug-Lindje të Kosovës",
+    href: "https://goo.gl/maps/mjxH4VqE8MGwPDrw6",
   },
   {
     category: ["restorante"],
@@ -31,6 +39,7 @@ var itemsData = [
     title: "restorante",
     desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non, reiciendis.",
     location: "Rugova",
+    href: "#",
   },
   {
     category: ["vila"],
@@ -42,6 +51,7 @@ var itemsData = [
     title: "vila",
     desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non, reiciendis.",
     location: "Rugova",
+    href: "#",
   },
   {
     category: ["vila", "prishtine"],
@@ -53,6 +63,19 @@ var itemsData = [
     title: "vila prishtine",
     desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non, reiciendis.",
     location: "Rugova",
+    href: "#",
+  },
+  {
+    category: ["male"],
+    img: [
+      "./assets/img/header/img1.webp",
+      "./assets/img/header/img2.webp",
+      "./assets/img/header/img3.webp",
+    ],
+    title: "male",
+    desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non, reiciendis.",
+    location: "Rugova",
+    href: "#",
   },
   {
     category: ["male"],
@@ -75,6 +98,7 @@ var itemsData = [
     title: "male",
     desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non, reiciendis.",
     location: "Rugova",
+    href: "#",
   },
   {
     category: ["male"],
@@ -86,6 +110,7 @@ var itemsData = [
     title: "male",
     desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non, reiciendis.",
     location: "Rugova",
+    href: "#",
   },
   {
     category: ["male"],
@@ -97,6 +122,7 @@ var itemsData = [
     title: "male",
     desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non, reiciendis.",
     location: "Rugova",
+    href: "#",
   },
   {
     category: ["male"],
@@ -108,6 +134,7 @@ var itemsData = [
     title: "male",
     desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non, reiciendis.",
     location: "Rugova",
+    href: "#",
   },
   {
     category: ["male"],
@@ -119,6 +146,7 @@ var itemsData = [
     title: "male",
     desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non, reiciendis.",
     location: "Rugova",
+    href: "#",
   },
   {
     category: ["male"],
@@ -130,6 +158,7 @@ var itemsData = [
     title: "male",
     desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non, reiciendis.",
     location: "Rugova",
+    href: "#",
   },
   {
     category: ["male"],
@@ -141,6 +170,7 @@ var itemsData = [
     title: "male",
     desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non, reiciendis.",
     location: "Rugova",
+    href: "#",
   },
   {
     category: ["male"],
@@ -152,6 +182,7 @@ var itemsData = [
     title: "male",
     desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non, reiciendis.",
     location: "Rugova",
+    href: "#",
   },
   {
     category: ["male"],
@@ -163,6 +194,7 @@ var itemsData = [
     title: "male",
     desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non, reiciendis.",
     location: "Rugova",
+    href: "#",
   },
   {
     category: ["male"],
@@ -174,6 +206,7 @@ var itemsData = [
     title: "male",
     desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non, reiciendis.",
     location: "Rugova",
+    href: "#",
   },
   {
     category: ["male"],
@@ -185,6 +218,7 @@ var itemsData = [
     title: "male",
     desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non, reiciendis.",
     location: "Rugova",
+    href: "#",
   },
   {
     category: ["male"],
@@ -196,6 +230,7 @@ var itemsData = [
     title: "male",
     desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non, reiciendis.",
     location: "Rugova",
+    href: "#",
   },
   {
     category: ["male"],
@@ -207,6 +242,7 @@ var itemsData = [
     title: "male",
     desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non, reiciendis.",
     location: "Rugova",
+    href: "#",
   },
   {
     category: ["male"],
@@ -218,6 +254,7 @@ var itemsData = [
     title: "male",
     desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non, reiciendis.",
     location: "Rugova",
+    href: "#",
   },
   {
     category: ["male"],
@@ -229,16 +266,6 @@ var itemsData = [
     title: "male",
     desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non, reiciendis.",
     location: "Rugova",
-  },
-  {
-    category: ["male"],
-    img: [
-      "./assets/img/header/img1.webp",
-      "./assets/img/header/img2.webp",
-      "./assets/img/header/img3.webp",
-    ],
-    title: "male",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non, reiciendis.",
-    location: "Rugova",
+    href: "#",
   },
 ];

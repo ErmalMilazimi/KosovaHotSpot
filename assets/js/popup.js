@@ -3,7 +3,7 @@ const popup = (element) => {
   let btn = document.getElementById("btn" + element);
   div.classList = "popup";
   let slider = document.querySelector(".popup .slider-img");
-  let img = document.querySelector(".popup .container-item-img img").src;
+  let img = document.querySelector(".popup .container-item-img-imgs img").src;
   changeBg(slider, img);
 
   btn.addEventListener("click", (e) => {
@@ -16,7 +16,7 @@ const popupSlider = (id) => {
   let slider = document.querySelector(".popup .slider-img");
   let img = document.getElementById(id);
 
-  let e = img.parentElement.parentElement.id;
+  let e = img.parentElement.parentElement.parentElement.id;
   let parent = document.getElementById(e);
   parent.addEventListener("click", (e) => {
     e.preventDefault();

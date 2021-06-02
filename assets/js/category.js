@@ -88,7 +88,7 @@ const ShowItems = () => {
         <section class="container-item" id="${id++}" onclick="popup(this.id)">
         <button id="btn${id - 1}"><span>+</span></button>
           <div class="container-item-img">
-            ${imgs}
+            <div class="container-item-img-imgs">${imgs}</div>
             <div class="slider-img" id="slider-img"></div>
           </div>
           <div class="container-item-text">
@@ -97,7 +97,9 @@ const ShowItems = () => {
             ${e.desc}
             </p>
             <p class="container-item-text-location">
-              <a href=""><i class="fas fa-map-marker-alt"></i>
+              <a href="${
+                e.href
+              }" target="_blank"><i class="fas fa-map-marker-alt"></i>
               ${e.location}</a>
             </p>
           </div>
@@ -112,7 +114,7 @@ const ShowItems = () => {
         <section class="container-item" id="${id++}" onclick="popup(this.id)">
         <button id="btn${id - 1}"><span>+</span></button>
           <div class="container-item-img">
-            ${imgs}
+            <div class="container-item-img-imgs">${imgs}</div>
             <div class="slider-img"></div>
           </div>
           <div class="container-item-text">
@@ -121,7 +123,9 @@ const ShowItems = () => {
             ${e.desc}
             </p>
             <p class="container-item-text-location">
-              <a href=""><i class="fas fa-map-marker-alt"></i>
+              <a href="${
+                e.href
+              }" target="_blank"><i class="fas fa-map-marker-alt"></i>
               ${e.location}</a>
             </p>
           </div>
@@ -131,15 +135,6 @@ const ShowItems = () => {
       }
     })
     .join("");
-  if (items.length === 0) {
-    items = `
-        <section class="container-item-nothig">
-          <h1>Per momentin nuk e kemi te regjistruar vendin e kerkuar!</h1>
-          <p>Nese dini ndonje vend te bukur dhe deshironi ta shfaqni ketu</p>
-          <a href="faq.html">Klikoni ketu</a>
-        </section>
-      `;
-  }
   let itemsArr = items.split("---");
   pagination(itemsArr);
 };
@@ -196,23 +191,33 @@ const pagination = (itemsArr) => {
 
   let numbers = "";
   for (let i = 0; i < pages; i++) {
-    let btn = "";
-    if (i == 0) {
-      btn = `<input class="pageCheck" type="radio" name="pagesNumber" id="pagesNumber${i}" checked />`;
-    } else {
-      btn = `<input class="pageCheck" type="radio" name="pagesNumber" id="pagesNumber${i}"/>`;
-    }
-    numbers += `${btn}
-    <label for="pagesNumber${i}" id="${i}" onclick="changePage(this.id)">
+    numbers += `
+    <label for="pagesNumber${i}" id="${i}" class="pageNumbers" onclick="changePage(this.id)">
       ${i + 1}
     </label>`;
+  }
+  if (itemsOnPage.trim().length === 0) {
+    itemsOnPage = `
+        <section class="container-item-nothig">
+          <h1>Per momentin nuk e kemi te regjistruar vendin e kerkuar!</h1>
+          <p>Nese dini ndonje vend te bukur dhe deshironi ta shfaqni ketu</p>
+          <a href="faq.html">Klikoni ketu</a>
+        </section>
+      `;
   }
   container.innerHTML = itemsOnPage;
   pageNumbers.innerHTML = numbers;
 };
 const changePage = (id) => {
-  let btnId = "page" + id;
-  let radioBtn = document.getElementById(btnId);
+  let radioBtn = document.getElementById("page" + id);
+
+  let removeActive = document.querySelector(".btnActive");
+  let addActive = document.getElementById(id);
+  addActive.classList.add("btnActive");
+  if (removeActive != null) {
+    removeActive.classList.remove("btnActive");
+  }
+
   radioBtn.checked = true;
   document.querySelector(".header").scrollIntoView();
 };
