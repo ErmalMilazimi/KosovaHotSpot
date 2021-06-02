@@ -2,9 +2,9 @@ var itemsData = [
   {
     category: ["male", "prishtine"],
     img: [
+      "./assets/img/header/img3.webp",
       "./assets/img/header/img1.webp",
       "./assets/img/header/img2.webp",
-      "./assets/img/header/img3.webp",
     ],
     title: "male prishtine",
     desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non, reiciendis.",

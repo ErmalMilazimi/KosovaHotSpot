@@ -80,7 +80,7 @@ const ShowItems = () => {
     .map((e) => {
       let imgs = e.img
         .map((g) => {
-          return `<img src="${g}" id="${id++}" alt="" />`;
+          return `<img src="${g}" id="${id++}" alt="" onclick="popupSlider(this.id)"/>`;
         })
         .join("");
       if (checkCategory(e.category)) {

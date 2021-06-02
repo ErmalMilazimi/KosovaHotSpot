@@ -244,40 +244,27 @@ main {
   align-items: flex-end;
   justify-content: center;
   padding-bottom: 20px;
+  pointer-events: all;
 }
 .popup .slider-img {
   position: absolute;
   width: 80%;
   height: 70%;
   top: 10px;
-  background-image: url("../img/header/img1.webp");
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
 }
 .popup .container-item-img img {
+  border: 2px solid white;
   position: static;
-  width: 150px;
-  height: 70px;
+  width: 100px;
+  height: 50px;
   opacity: 1;
+  cursor: pointer;
 }
-.popup .container-item-img img:first-child {
-  bottom: auto;
-  left: 50%;
-  z-index: 1;
-  opacity: 1;
-}
-.popup .container-item-img img:nth-child(2) {
-  bottom: auto;
-  left: 50%;
-  z-index: 1;
-  opacity: 1;
-}
-.popup .container-item-img img:nth-child(3) {
-  bottom: auto;
-  left: 50%;
-  z-index: 1;
-  opacity: 1;
+.popup .container-item-img img:hover {
+  border: 2px solid var(--first-color);
 }
 .popup .container-item-text {
   background: whitesmoke;
@@ -384,5 +371,18 @@ footer {
   .popup > button {
     top: 30px;
     right: 20px;
+  }
+}
+@media only screen and (max-height: 600px) {
+  .popup {
+    overflow-y: scroll;
+  }
+  .popup .container-item-img {
+    height: 500px;
+    padding-top: 400px;
+    width: 100%;
+  }
+  .popup .container-item-text {
+    height: 200px;
   }
 }
