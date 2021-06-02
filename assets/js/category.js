@@ -80,7 +80,7 @@ const ShowItems = () => {
     .map((e) => {
       let imgs = e.img
         .map((g) => {
-          return `<img src="${g}" id="${id++}" alt="" onclick="popupSlider(this.id)"/>`;
+          return `<img src="${g}" id="img${id++}" alt="" onclick="popupSlider(this.id)"/>`;
         })
         .join("");
       if (checkCategory(e.category)) {
@@ -166,19 +166,53 @@ const checkCategory = (arr) => {
   return false;
 };
 const pagination = (itemsArr) => {
-  let itemsString = itemsArr
-    .map((e) => {
-      return e;
-    })
-    .join("");
-
-  let pages = itemsArr.length - 1;
-  let numbers = "";
+  let itemsPerPage = 10;
+  let pages = (itemsArr.length - 1) / itemsPerPage;
+  let itemsOnPage = "";
 
   for (let i = 0; i < pages; i++) {
-    numbers += `<p>${i + 1}</p>`;
+    let content = "";
+    for (let j = 0; j < itemsPerPage; j++) {
+      let idx = i * itemsPerPage + j;
+      if (idx < itemsArr.length) {
+        content += itemsArr[idx];
+      } else {
+        break;
+      }
+    }
+    let btn = "";
+    if (i == 0) {
+      btn = `<input class="pageCheck" type="radio" name="pages" id="page${i}" checked />`;
+    } else {
+      btn = `<input class="pageCheck" type="radio" name="pages" id="page${i}"/>`;
+    }
+
+    itemsOnPage += `
+    ${btn}
+    <label class="page" for="page${i}">
+      ${content}
+    </label>`;
   }
 
-  container.innerHTML = itemsString;
+  let numbers = "";
+  for (let i = 0; i < pages; i++) {
+    let btn = "";
+    if (i == 0) {
+      btn = `<input class="pageCheck" type="radio" name="pagesNumber" id="pagesNumber${i}" checked />`;
+    } else {
+      btn = `<input class="pageCheck" type="radio" name="pagesNumber" id="pagesNumber${i}"/>`;
+    }
+    numbers += `${btn}
+    <label for="pagesNumber${i}" id="${i}" onclick="changePage(this.id)">
+      ${i + 1}
+    </label>`;
+  }
+  container.innerHTML = itemsOnPage;
   pageNumbers.innerHTML = numbers;
+};
+const changePage = (id) => {
+  let btnId = "page" + id;
+  let radioBtn = document.getElementById(btnId);
+  radioBtn.checked = true;
+  document.querySelector(".header").scrollIntoView();
 };

@@ -122,11 +122,20 @@ main {
   margin-top: 50px;
   min-height: 200px;
 }
-#items-container {
+.pageCheck {
+  display: none;
+}
+.pageCheck + label {
+  display: none;
+}
+.page {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 40px;
   justify-content: space-between;
+}
+.pageCheck:checked + label {
+  display: grid;
 }
 .container-item {
   position: relative;
@@ -286,7 +295,8 @@ main {
   flex-wrap: wrap;
   text-align: center;
 }
-#page-numbers p {
+#page-numbers label {
+  display: block;
   background: var(--first-color);
   color: white;
   text-align: center;
@@ -297,9 +307,16 @@ main {
   cursor: pointer;
   transition: 0.3s ease;
 }
-#page-numbers p:hover {
+#page-numbers .pageCheck:checked + label {
+  color: var(--first-color);
+  box-shadow: 0 0 5px 2px var(--first-color),
+    inset 0 0 5px 2px var(--first-color);
+  background: white;
+}
+#page-numbers label:hover,
+#page-numbers label:focus {
   background: rgb(114, 27, 27);
-  color: black;
+  color: white;
 }
 footer {
   position: relative;
@@ -313,7 +330,7 @@ footer {
   font-size: 1.3rem;
 }
 @media only screen and (max-width: 1024px) {
-  #items-container {
+  .page {
     grid-template-columns: 1fr;
   }
   .popup {
