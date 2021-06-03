@@ -16,6 +16,12 @@ const popupSlider = (id) => {
   let slider = document.querySelector(".popup .slider-img");
   let img = document.getElementById(id);
 
+  let active = document.querySelector(".active");
+  if (active != null) {
+    active.classList.remove("active");
+  }
+  img.classList.add("active");
+
   let e = img.parentElement.parentElement.parentElement.id;
   let parent = document.getElementById(e);
   parent.addEventListener("click", (e) => {

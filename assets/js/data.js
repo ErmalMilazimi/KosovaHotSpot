@@ -42,13 +42,13 @@ var itemsData = [
     href: "#",
   },
   {
-    category: ["vila"],
+    category: ["parqe"],
     img: [
       "./assets/img/header/img1.webp",
       "./assets/img/header/img2.webp",
       "./assets/img/header/img3.webp",
     ],
-    title: "vila",
+    title: "parqe",
     desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non, reiciendis.",
     location: "Rugova",
     href: "#",
