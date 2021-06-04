@@ -1,5 +1,6 @@
 body {
   min-height: 100vh;
+  padding-bottom: 80px;
 }
 nav {
   display: flex;
@@ -117,6 +118,8 @@ nav {
   margin-right: 20px;
 }
 footer {
+  position: relative;
+  bottom: -85px;
   width: 100%;
   background: var(--first-color);
   height: 80px;
