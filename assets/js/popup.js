@@ -5,11 +5,13 @@ const popup = (element) => {
   let slider = document.querySelector(".popup .slider-img");
   let img = document.querySelector(".popup .container-item-img-imgs img").src;
   changeBg(slider, img);
+  document.querySelector("body").style = "overflow: hidden;";
 
   btn.addEventListener("click", (e) => {
     e.preventDefault();
     e.stopPropagation();
     div.classList = "container-item";
+    document.querySelector("body").style = "overflow: auto;";
   });
 };
 const popupSlider = (id) => {

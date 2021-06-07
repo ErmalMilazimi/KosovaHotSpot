@@ -1,6 +1,8 @@
 :root {
   --first-font-color: white;
   --first-color: rgb(165, 42, 42);
+  --before-background: #fff;
+  --before-animation: 3s;
 }
 * {
   margin: 0;
@@ -281,14 +283,14 @@ header {
 .select-btn-container::before {
   content: "";
   position: absolute;
-  background: white;
+  background: var(--before-background);
   width: 10px;
   height: 220px;
   top: -86px;
   left: 96px;
   transform: rotate(0deg);
-  -webkit-animation: btnAnimate 3s linear infinite;
-  animation: btnAnimate 3s linear infinite;
+  -webkit-animation: btnAnimate var(--before-animation) linear infinite;
+  animation: btnAnimate var(--before-animation) linear infinite;
   z-index: -1;
 }
 @-webkit-keyframes btnAnimate {
