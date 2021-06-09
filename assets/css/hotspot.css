@@ -399,6 +399,10 @@ footer {
     top: 30px;
     right: 50px;
   }
+  .popup .container-item-text-desc {
+    height: 100px;
+    overflow-y: scroll;
+  }
 }
 @media only screen and (max-width: 450px) {
   .container-item {
@@ -426,7 +430,7 @@ footer {
     overflow-y: scroll;
   }
   .popup .slider-img {
-    height: 400px;
+    height: 200px;
   }
   .popup .container-item-img {
     height: 500px;
