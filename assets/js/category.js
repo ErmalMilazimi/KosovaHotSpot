@@ -160,8 +160,13 @@ const checkCategory = (arr) => {
   }
   return false;
 };
+var itemsPerPage = 10;
+const changeNumber = (nr) => {
+  itemsPerPage = nr;
+  console.log(itemsPerPage);
+  ShowItems();
+};
 const pagination = (itemsArr) => {
-  let itemsPerPage = 10;
   let pages = (itemsArr.length - 1) / itemsPerPage;
   let itemsOnPage = "";
 

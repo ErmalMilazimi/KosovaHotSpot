@@ -110,6 +110,27 @@ main {
   text-transform: uppercase;
   pointer-events: none;
 }
+.styling {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+}
+.btn-items-showed input {
+  display: none;
+}
+.btn-items-showed input:checked + label {
+  border: 2px solid rgba(165, 42, 42, 0.8);
+}
+.btn-items-showed label {
+  display: inline-block;
+  text-align: center;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  padding: 5px;
+  margin: 0 5px;
+  cursor: pointer;
+}
 .container {
   margin-top: 50px;
   min-height: 200px;

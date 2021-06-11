@@ -171,6 +171,19 @@ var itemsData = [
     href: "https://goo.gl/maps/hsPaiZKuM4M7XyWU8",
   },
   {
+    category: ["parqe", "prishtine"],
+    img: [
+      "./assets/img/locations/parku_taukbahqe/1.webp",
+      "./assets/img/locations/parku_taukbahqe/2.webp",
+      "./assets/img/locations/parku_taukbahqe/3.webp",
+      "./assets/img/locations/parku_taukbahqe/4.webp",
+    ],
+    title: "Parku Taukbahçe",
+    desc: "Park i hapur me stazë te vrapimit, këndi për ushtrime, parking. Pjesa e dytë e parkut është vend ideal për shëtitjen e qeneve pasi që zakonisht nuk ka shumë njerëz. Ka edhe 2 fusha profesionale të tenisit. Gjatë sezonës së verës në hyrje të parkut hapet parku me lojëra të ndryshme si për të rritur edhe për fëmijë.",
+    location: "Nazim Gafurri, Prishtinë",
+    href: "https://goo.gl/maps/HFpsMEeHvTaRJwRx5",
+  },
+  {
     category: ["lumenj", "ferizaj"],
     img: [
       "./assets/img/locations/lumi_lepencit/1.webp",
@@ -229,6 +242,20 @@ var itemsData = [
     href: "https://goo.gl/maps/BJKkeY6Jj6h2EwyL7",
   },
   {
+    category: ["parqe", "prishtine"],
+    img: [
+      "./assets/img/locations/parku_qytetit_prishtine/1.webp",
+      "./assets/img/locations/parku_qytetit_prishtine/2.webp",
+      "./assets/img/locations/parku_qytetit_prishtine/3.webp",
+      "./assets/img/locations/parku_qytetit_prishtine/4.webp",
+      "./assets/img/locations/parku_qytetit_prishtine/5.webp",
+    ],
+    title: "Parku i Qytetit Prishtine",
+    desc: "Parku i qytetit të Prishtinës mirëmbahet mjaftë mirë, ka hapsësirë mjaftë për të luajtur dhe shëtitur kafshët e shoqërimit. Ky park është shumë afër qytetit sa që nuk nevojitet vetura për ta vizituar.",
+    location: "Hamëz Jashari, Prishtinë",
+    href: "https://goo.gl/maps/Aud911d2PGQRMVUS9",
+  },
+  {
     category: ["liqene", "gjakove"],
     img: [
       "./assets/img/locations/liqeni_radoniqit/1.webp",
@@ -282,6 +309,32 @@ var itemsData = [
     desc: "Ky liqen ka një sipërfaqe prej rreth 0.2 kilometrash katror ( rreth 20 ha) si dhe me një thellësi prej rreth 20 metrash. Po ashtu ky liqen është i pasur me florë dhe faunë si dhe shumë i përshtatshëm për peshkim.",
     location: "Drenas, Prishtine",
     href: "https://goo.gl/maps/gipNifYvEwLgGSCy9",
+  },
+  {
+    category: ["parqe", "gjilan"],
+    img: [
+      "./assets/img/locations/parku_qytetit_gjilan/1.webp",
+      "./assets/img/locations/parku_qytetit_gjilan/2.webp",
+      "./assets/img/locations/parku_qytetit_gjilan/3.webp",
+      "./assets/img/locations/parku_qytetit_gjilan/4.webp",
+    ],
+    title: "Parku i Qytetit Gjilan",
+    desc: "Park për të rritur dhe fëmijë, hapësira të mjaftueshme për pushim. Vend i qetë, i gjelbëruar dhe relaksues.",
+    location: "Bulevardi i Pavarësisë, Gjilan",
+    href: "https://goo.gl/maps/XSspEJN7yV23D1Xt8",
+  },
+  {
+    category: ["tetjera", "prishtine"],
+    img: [
+      "./assets/img/locations/sheshi_skenderbeu/1.webp",
+      "./assets/img/locations/sheshi_skenderbeu/2.webp",
+      "./assets/img/locations/sheshi_skenderbeu/3.webp",
+      "./assets/img/locations/sheshi_skenderbeu/4.webp",
+    ],
+    title: "Sheshi Skënderbeu",
+    desc: "Pas përfundimit të Luftës së Kosovës më 1999 dhe më gjatë nën sundimin serb, shqiptarët e Kosovës në vitin 2001 ngritën një monument brenda qendrës së Prishtinës për Skënderbeun, një shqiptar mesjetar që luftoi kundër forcave osmane. Gjatë një udhëtimi prej katër ditësh statuja u soll nga Kruja, Shqipëri në mes të Prishtinës.",
+    location: "Prishtine",
+    href: "https://goo.gl/maps/NXPsVxXPvJyPwyFD7",
   },
   // {
   //   category: ["natyre"],
